@@ -11,27 +11,6 @@ import type { ResipeObject } from './data'
 
 
 const App:React.FC = () => {
-  //const [resipeList, setResipeList] = useState<ResipeObject>()
-  //const [itemResipe, setItemResipe] = useState()
-  
- // useEffect(() =>{
-   //  axios.get(PREFIX).then((resp) =>{
-     // const resipeObject = resp.data
-    //  setResipeList(resipeObject)
-    // })
- // }, [setResipeList])
-  
-
-//useEffect(() => {
-  //axios.get(`${PREFIX}/${id}`).then((resp) => {
-  ///  const resipeObject = resp.data;
-   // setResipeList(resipeObject);
- /// });
-///
-// }, [setResipeList]);
-
-
-  //console.log(resipeList)
   
   return (
     <>
