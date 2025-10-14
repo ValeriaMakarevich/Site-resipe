@@ -1,0 +1,41 @@
+[
+    { "id": 1,
+      "name": "Паста карбонара", 
+      "img": "zoran-borojevic--5FECW242og-unsplash.jpg",
+      "tag": "Паста"
+    },
+    { "id": 2,
+      "name": "Стейк", 
+      "img": "steik-iz-masa-na-derevannoi-tarelke-s-cernym-percem-i-rozmarinom.jpg", 
+      "tag": "Мясо"
+    },
+    { "id": 3,
+      "name": "Пирог с грибами", 
+      "img": "pradeep-javedar-8dq3XrWBB7M-unsplash.jpg", 
+      "tag": "Вегетерианское"
+    },
+    { "id": 4,
+      "name": "Шоколадный фондан", 
+      "img": "luna-hu-RTJjyYTR6Y8-unsplash.jpg",
+       "tag": "Десерт"
+    },
+    { "id": 5,
+      "name": "Фалафель", 
+      "img": "anton-rN7GMHp_og4-unsplash.jpg", 
+       "tag": "Вегетерианское"
+    },
+    { "id": 6,
+      "name": "Цезарь с курицей", 
+      "img": "alina-chernysheva-oj2hBf5TOFM-unsplash.jpg", 
+      "tag": "Курица"
+    },
+    { "id": 7,
+      "name": "Паста Альфредо", 
+      "img": "engin-akyurt-Jrvcg9My0B4-unsplash.jpg", 
+      "tag": "Паста"
+    },
+    { "id": 8,
+    "name": "Курица в панировке", 
+      "img": "ke-vin-nwmZhwOSVnM-unsplash.jpg", 
+      "tag": "Курица"
+    }]

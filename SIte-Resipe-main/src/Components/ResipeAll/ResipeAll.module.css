@@ -1,0 +1,85 @@
+.ResipeContainer{
+    display: grid;
+     grid-template-columns: repeat(3, 400px);
+     grid-template-rows: repeat(3, 400px);
+     column-gap: 2%;
+     row-gap: 5%;
+     justify-content: center;
+     grid-auto-flow: column;
+    
+}
+
+.CardContainer{
+     background-color: white;
+     cursor: pointer;
+}
+
+.imageResipe{
+width: 400px;
+height: 280px;
+}
+
+.resipeName{
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.tagButton{
+    border: none;
+    background-color:  rgb(255, 228, 109);
+    padding: 0 15px 0 15px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+
+
+@media (max-width: 1024px) {
+    .ResipeContainer{
+     grid-template-columns: repeat(2, 400px);
+     grid-template-rows: repeat(4, 400px);
+}
+
+}
+
+
+
+@media (max-width: 768px){
+   .ResipeContainer{
+     grid-template-columns: repeat(2, 330px);
+     grid-template-rows: repeat(4, 330px);
+     column-gap: 8%;
+}
+
+.imageResipe{
+width: 330px;
+height: 230px;
+}
+
+.resipeName{
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.tagButton{
+    border: none;
+    background-color:  rgb(255, 228, 109);
+    padding: 0 10px 0 10px;
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-left: 10px;
+    font-size: 11px;
+}
+}
+
+
+@media (max-width: 600px){
+      .ResipeContainer{
+     grid-template-columns: repeat(1, 330px);
+     grid-template-rows: repeat(8, 330px);
+    row-gap: 3%;
+}
+}

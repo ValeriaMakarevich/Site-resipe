@@ -1,0 +1,26 @@
+
+.searchContainer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4%;
+}
+
+
+.search{
+    border: none;
+    width: 40%;
+    height: 50px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.search:focus{
+   outline: none;
+
+}
+
+@media (max-width:768px){
+    
+}
