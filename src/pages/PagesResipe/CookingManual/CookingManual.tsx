@@ -1,6 +1,7 @@
 import styles from "./CookingManual.module.css";
+import type { CookingManualProps } from "./CookingManual.props";
 
-export const CookingManual = ({ manual }) => {
+export const CookingManual: React.FC<CookingManualProps> = ({ manual }) => {
   return (
     <>
       <h2 className={styles.titleManual}>Инструкция по приготовлению</h2>

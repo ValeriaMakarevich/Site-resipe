@@ -1,6 +1,8 @@
+import type { IngredientsListProps } from "./IngrediensttsLi.props";
 import styles from "./IngredientsList.module.css";
 
-export const IngredientsList = ({ ingredients }) => {
+
+export const IngrediensttsLi: React.FC<IngredientsListProps> = ({ ingredients}) => {
   return (
     <>
       <h2 className={styles.titleProduct}>Ингредиенты</h2>
