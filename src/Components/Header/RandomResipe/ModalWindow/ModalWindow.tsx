@@ -1,13 +1,9 @@
 import { Link } from "react-router";
 import styles from "./ModalWindow.module.css";
-import type { ResipeObject } from "../../../../data";
+import type { ModalWindowtProps } from "./ModalWindow.props";
 
 
-interface ModalWindowtProps {
-    active: boolean;
-    setActive: (open: boolean) => void;
-    resipe: ResipeObject
-  }
+
 
 const ModalWindow:React.FC<ModalWindowtProps> = ({active, setActive, resipe, random}) =>{
 

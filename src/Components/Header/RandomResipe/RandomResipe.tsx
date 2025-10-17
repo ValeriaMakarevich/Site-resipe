@@ -6,7 +6,7 @@ import { resipeObject} from '../../../data'
 
 const RandomResipe:React.FC = () =>{
   const [modalActive, setModalActive] = useState(false)
-  const [resipe, setResipe] = useState({name: '', img: '', tag: ''});
+  const [resipe, setResipe] = useState({});
 
 const modalOpen = () =>{
   setModalActive(true)

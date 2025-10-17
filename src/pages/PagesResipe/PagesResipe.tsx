@@ -4,6 +4,7 @@ import { resipeObject } from "../../data";
 import Logo from "../../Components/Header/Logo/Logo";
 import { IngredientsList } from "./IngridientList/IngredientsList";
 import { CookingManual } from "./CookingManual/CookingManual";
+import ScrollToTop from "../../Components/ScrollToTop/ScrollToTop";
 ;
 
 export const PagesResipe = () => {
@@ -12,6 +13,7 @@ export const PagesResipe = () => {
 
   return (
     <>
+    <ScrollToTop/>
       <Logo />
       {resipeObject.map((item, id) => {
         if (item.id == idResipe) {

@@ -1,5 +1,5 @@
 export interface ResipeObject {
-  id?: number;
+  id: number;
   name: string;
   img: string;
   tag: string;
@@ -9,22 +9,22 @@ export interface ResipeObject {
 
 export const CategoriesObject = [
   {  id:1,
-     name: "Вегетерианское", 
+     tag: "Вегетерианское", 
      img: "image 2.png" },
   { id: 2,
-    name: "Мясо",
+    tag: "Мясо",
     img: "image 3.png",
   },
   { id:3,
-    name: "Курица",
+    tag: "Курица",
     img: "image 4.png",
   },
   { id:4,
-    name: "Десерты",
+    tag: "Десерты",
     img: "image 5.png",
   },
   { id:5,
-    name: "Паста",
+    tag: "Паста",
     img: "image 6.png",
   }
 ];
@@ -62,7 +62,7 @@ export const resipeObject: Array<ResipeObject> = [
     id: 4,
     name: "Шоколадный фондан",
     img: "luna-hu-RTJjyYTR6Y8-unsplash.jpg",
-    tag: "Десерт",
+    tag: "Десерты",
     ingredients:
       ["Шоколад тёмный — 100 г", "Сливочное масло — 80 г", "Яйца — 2 шт.", "Сахар — 50 г", "Мука — 40 г", "Щепотка соли", "Масло и мука для смазывания формочек"],
     manual:
