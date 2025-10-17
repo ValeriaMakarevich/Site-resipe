@@ -1,12 +1,12 @@
 import ModalWindow from './ModalWindow/ModalWindow'
 import { useState } from 'react'
 import styles from './RandomResipe.module.css' 
-import { resipeObject} from '../../../data'
+import { resipeObject, type ResipeObject} from '../../../data'
 
 
 const RandomResipe:React.FC = () =>{
   const [modalActive, setModalActive] = useState(false)
-  const [resipe, setResipe] = useState({});
+  const [resipe, setResipe] = useState<ResipeObject | null>(null);
 
 const modalOpen = () =>{
   setModalActive(true)
@@ -26,8 +26,15 @@ const modalOpen = () =>{
         <p className={styles.text}>Нажмите на кнопку</p>
         <button className={styles.buttonResipe} onClick={() => {modalOpen(); random()} }>Случайный рецепт</button>
         </div>
-        <ModalWindow resipe={resipe} active={modalActive} setActive={setModalActive} random={random}/>
-     </>
+        {resipe &&
+          (<ModalWindow 
+          resipe={resipe} 
+          active={modalActive} 
+          setActive={setModalActive} 
+          random={random}/>
+          )
+        }
+          </>
     )
 }
 

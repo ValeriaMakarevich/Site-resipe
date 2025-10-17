@@ -9,7 +9,7 @@ import ScrollToTop from "../../Components/ScrollToTop/ScrollToTop";
 
 export const PagesResipe = () => {
   const urlResipe = useParams();
-  const idResipe = urlResipe.id;
+  const idResipe = urlResipe.id ? parseInt(urlResipe.id, 10) : null;;
 
   return (
     <>

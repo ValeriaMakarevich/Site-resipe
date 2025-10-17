@@ -1,1 +1,0 @@
-export const PREFIX = "/src/data.json"

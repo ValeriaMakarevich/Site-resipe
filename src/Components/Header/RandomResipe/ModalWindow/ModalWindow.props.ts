@@ -1,16 +1,8 @@
+import type { ResipeObject } from "../../../../data";
 
-interface Resipe{
- id: number;
-  name: string;
-  img: string;
-  tag: string;
-  ingredients?: Array<string>;
-  manual?: Array<string>;
+export interface ModalWindowProps {
+  active: boolean;
+  setActive: (active: boolean) => void;
+  resipe: ResipeObject;
+  random: () => void;
 }
-
-export interface ModalWindowtProps {
-    active: boolean;
-    setActive: (open: boolean) => void;
-    resipe: Array<Resipe>;
-    random:() => void
-  }

@@ -1,11 +1,11 @@
 import { Link } from "react-router";
 import styles from "./ModalWindow.module.css";
-import type { ModalWindowtProps } from "./ModalWindow.props";
+import type { ModalWindowProps } from "./ModalWindow.props";
 
 
 
 
-const ModalWindow:React.FC<ModalWindowtProps> = ({active, setActive, resipe, random}) =>{
+const ModalWindow:React.FC<ModalWindowProps> = ({active, setActive, resipe, random}) =>{
 
     return (
       <div

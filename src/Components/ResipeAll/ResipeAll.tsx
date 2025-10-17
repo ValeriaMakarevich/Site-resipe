@@ -12,16 +12,23 @@ const ResipeAll: React.FC = () => {
 
 
   const filterResipe = (
-    request: string,
+    inputValue: string,
     buttonValue: string,
     resipeArray: Array<ResipeObject>
   ) => {
-    if (!request && !buttonValue) {
+   if (!inputValue && !buttonValue) {
       return resipeArray;
     }
-    return resipeArray.filter(({ name, tag }) =>
-      name.toLowerCase().includes(request.toLowerCase()) && tag === buttonValue
-    );
+
+    return resipeArray.filter(({ name, tag }) => {
+      const matchesInput = inputValue
+        ? name.toLowerCase().includes(inputValue.toLowerCase())
+        : true;
+      const matchesButton = buttonValue
+        ? tag === buttonValue
+        : true;
+      return matchesInput && matchesButton;
+    });
   };
 
   useEffect(() => {
