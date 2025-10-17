@@ -1,8 +1,8 @@
 
 import { Route, Routes } from 'react-router'
 import './App.css'
-import { PagesResipe } from './pages/PagesResipe/PagesResipe'
-import { MainPage } from './pages/MainPage/MainPage';
+import { PagesResipe } from './Pages/PagesResipe/PagesResipe'
+import { MainPage } from './Pages/MainPage/MainPage';
 
 
 
