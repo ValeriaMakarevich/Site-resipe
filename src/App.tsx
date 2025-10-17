@@ -2,7 +2,7 @@
 import { Route, Routes } from 'react-router'
 import './App.css'
 import { PagesResipe } from './pages/PagesResipe/PagesResipe'
-import { MainPage } from './pages/mainPage/MainPage'
+import { MainPage } from './pages/MainPage/MainPage'
 
 
 

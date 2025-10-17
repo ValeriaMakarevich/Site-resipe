@@ -1,4 +1,4 @@
-import type { IngredientsListProps } from "./IngrediensttsLi.props";
+import type { IngredientsListProps } from "./IngredientsList.props";
 import styles from "./IngredientsList.module.css";
 
 

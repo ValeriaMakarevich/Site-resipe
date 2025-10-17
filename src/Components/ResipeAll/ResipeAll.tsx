@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./ResipeAll.module.css";
-import SearchResipe from "./SearchResipe/SearchResipe";
+import SearchResipe from "../SearchResipe/SearchResipe";
 import { Link } from "react-router";
 import { resipeObject, type ResipeObject } from "../../data";
 import CategoriesResipe from "../CategoriesResipe/CategoriesResipe";
@@ -50,12 +50,13 @@ const ResipeAll: React.FC = () => {
       />
       <SearchResipe inputValue={inputValue} setInputValue={setInputValue} />
 
-      <div className={styles.ResipeContainer}>
+      <div className={styles.resipeContainer}>
         {resipeList.map((item, id) => {
           return (
-            <div className={styles.CardContainer} key={id}>
+            <div className={styles.cardContainer} key={id}>
               <Link
                 to={`/PagesResipe/${item.id}`}
+                className={styles.link}
               >
                 <img className={styles.imageResipe} src={item.img} alt="" />
                 <p className={styles.resipeName}>{item.name}</p>

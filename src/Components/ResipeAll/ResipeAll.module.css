@@ -1,4 +1,4 @@
-.ResipeContainer{
+.resipeContainer{
     display: grid;
      grid-template-columns: repeat(3, 400px);
      grid-template-rows: repeat(3, 400px);
@@ -9,9 +9,14 @@
     
 }
 
-.CardContainer{
+.cardContainer{
      background-color: white;
      cursor: pointer;
+}
+
+.link{
+    color: black;
+     text-decoration: none;
 }
 
 .imageResipe{
@@ -37,7 +42,7 @@ height: 280px;
 
 
 @media (max-width: 1024px) {
-    .ResipeContainer{
+    .resipeContainer{
      grid-template-columns: repeat(2, 400px);
      grid-template-rows: repeat(4, 400px);
 }
@@ -47,7 +52,7 @@ height: 280px;
 
 
 @media (max-width: 768px){
-   .ResipeContainer{
+   .resipeContainer{
      grid-template-columns: repeat(2, 330px);
      grid-template-rows: repeat(4, 330px);
      column-gap: 8%;
@@ -77,7 +82,7 @@ height: 230px;
 
 
 @media (max-width: 600px){
-      .ResipeContainer{
+      .resipeContainer{
      grid-template-columns: repeat(1, 330px);
      grid-template-rows: repeat(8, 330px);
     row-gap: 3%;

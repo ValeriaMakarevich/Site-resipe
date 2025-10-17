@@ -3,9 +3,8 @@ import { CategoriesObject } from "../../data";
 import styles from "./CategoriesResipe.module.css";
 import type { CategoriesResipeProps } from "./CategoriesResipe.props";
 
-
-
 const CategoriesResipe: FC<CategoriesResipeProps> = ({ setButtonValue }) => {
+  
   const getButtonValue = (e: MouseEvent<HTMLInputElement>) => {
     e.preventDefault();
     setButtonValue((e.target as HTMLInputElement).value);
@@ -20,8 +19,8 @@ const CategoriesResipe: FC<CategoriesResipeProps> = ({ setButtonValue }) => {
           return (
             <form className={styles.buttonCategories} key={id}>
               <input
-                onClick={getButtonValue}
                 className={styles.button}
+                onClick={getButtonValue}
                 type="image"
                 src={item.img}
                 value={item.tag}
