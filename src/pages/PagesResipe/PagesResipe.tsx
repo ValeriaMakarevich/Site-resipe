@@ -22,7 +22,7 @@ export const PagesResipe = () => {
           return (
             <div className={styles.container} key={id}>
               <h1 className={styles.title}>{item.name}</h1>
-              <img className={styles.image} src={`/${item.img}`} alt="" />
+              <img className={styles.image} src={`/${item.img}`} alt={item.name} />
               <IngredientsList ingredients={item.ingredients}/>
               <div className={styles.ingridients}></div>
               <CookingManual manual={item.manual}/>

@@ -57,6 +57,7 @@ const ResipeAll: React.FC = () => {
               <Link
                 to={`/PagesResipe/${item.id}`}
                 className={styles.link}
+                role="button"
               >
                 <img className={styles.imageResipe} src={item.img} alt="" />
                 <p className={styles.resipeName}>{item.name}</p>

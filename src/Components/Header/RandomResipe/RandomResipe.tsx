@@ -1,41 +1,53 @@
-import ModalWindow from './ModalWindow/ModalWindow'
-import { useState } from 'react'
-import styles from './RandomResipe.module.css' 
-import { resipeObject, type ResipeObject} from '../../../data'
+// src/components/RandomResipe/RandomResipe.tsx
+import ModalWindow from "./ModalWindow/ModalWindow";
+import { useState } from "react";
+import styles from "./RandomResipe.module.css";
+import { resipeObject, type ResipeObject } from "../../../data";
 
 
-const RandomResipe:React.FC = () =>{
-  const [modalActive, setModalActive] = useState(false)
+const RandomResipe: React.FC = () => {
+  const [modalActive, setModalActive] = useState(false);
   const [resipe, setResipe] = useState<ResipeObject | null>(null);
 
-const modalOpen = () =>{
-  setModalActive(true)
-}
+  const getRandomRecipe = (): ResipeObject | null => {
+    if (resipeObject.length === 0) return null;
+    const randomIndex = Math.floor(Math.random() * resipeObject.length);
+    return resipeObject[randomIndex];
+  };
 
-  const random = () =>{
-    const randomIndex = Math.floor(Math.random() * resipeObject.length) 
-    setResipe(resipeObject[randomIndex])
-  }
+  const handleOpenModal = () => {
+    const recipe = getRandomRecipe();
+    if (recipe) {
+      setResipe(recipe);
+      setModalActive(true);
+    }
+  };
 
-  console.log(resipe)
-    return (
-  <>
-        <img className={styles.backgroundResipe} src="fanera-doska.jpg" alt="" />
-        <div className={styles.randomResipe}>
-        <p className={styles.title}>Не знаете что приготовить сегодня?</p>
+  return (
+    <>
+      <img
+        className={styles.backgroundResipe}
+        src="fanera-doska.jpg"
+        alt="Фон кухонной доски"
+      />
+      <div className={styles.randomResipe}>
+        <h1 className={styles.title}>Не знаете, что приготовить сегодня?</h1>
         <p className={styles.text}>Нажмите на кнопку</p>
-        <button className={styles.buttonResipe} onClick={() => {modalOpen(); random()} }>Случайный рецепт</button>
-        </div>
-        {resipe &&
-          (<ModalWindow 
-          resipe={resipe} 
-          active={modalActive} 
-          setActive={setModalActive} 
-          random={random}/>
-          )
-        }
-          </>
-    )
-}
+        <button className={styles.buttonResipe} onClick={handleOpenModal}>
+          ✨ Случайный рецепт
+        </button>
+      </div>
 
-export default RandomResipe
+      {resipe && (
+        <ModalWindow
+          resipe={resipe}
+          active={modalActive}
+          setActive={setModalActive}
+          random={handleOpenModal}
+        />
+      )}
+    </>
+  );
+};
+
+export default RandomResipe;

@@ -1,36 +1,32 @@
-import type { FC, MouseEvent } from "react";
+// src/components/CategoriesResipe/CategoriesResipe.tsx
+import type { FC } from "react";
 import { CategoriesObject } from "../../data";
 import styles from "./CategoriesResipe.module.css";
 import type { CategoriesResipeProps } from "./CategoriesResipe.props";
 
 const CategoriesResipe: FC<CategoriesResipeProps> = ({ setButtonValue }) => {
-  
-  const getButtonValue = (e: MouseEvent<HTMLInputElement>) => {
-    e.preventDefault();
-    setButtonValue((e.target as HTMLInputElement).value);
+  const handleCategoryClick = (tag: string) => {
+    setButtonValue(tag);
   };
 
   return (
     <>
       <p className={styles.heading}>Категории</p>
-
       <div className={styles.container}>
-        {CategoriesObject.map((item, id) => {
-          return (
-            <form className={styles.buttonCategories} key={id}>
-              <input
-                className={styles.button}
-                onClick={getButtonValue}
-                type="image"
-                src={item.img}
-                value={item.tag}
-              />
-              <label className={styles.name}>{item.tag}</label>
-            </form>
-          );
-        })}
+        {CategoriesObject.map((item) => (
+          <button
+            key={item.id}
+            className={styles.buttonCategories}
+            onClick={() => handleCategoryClick(item.tag)}
+            type="button"
+          >
+            <img src={item.img} alt={item.tag} className={styles.image} />
+            <span className={styles.name}>{item.tag}</span>
+          </button>
+        ))}
       </div>
     </>
   );
 };
+
 export default CategoriesResipe;

@@ -23,23 +23,30 @@ const ModalWindow:React.FC<ModalWindowProps> = ({active, setActive, resipe, rand
             <img
               className={styles.imgClose}
               src="multiplication_17435831.png"
-              alt=""
+              alt="кнопка закрыть"
             />
           </button>
-          <img className={styles.resipeImg} src={resipe.img} alt="" />
-          <p className={styles.resipeName}>{resipe.name}</p>
-          <button className={styles.resipeTag}>{resipe.tag}</button>
+          <img
+            className={styles.resipeImg}
+            src={resipe.img}
+            alt={resipe.name}
+          />
 
-          <div className={styles.btnContainer}>
-            <Link to={`/PagesResipe/${resipe.id}`}>
-              <button className={styles.wiewResipe}>Посмотреть рецепт</button>
-            </Link>
-            <button className={styles.change} onClick={random}>
-              Другой рецепт
-            </button>
-            <button className={styles.close} onClick={() => setActive(false)}>
-              Закрыть
-            </button>
+          <p className={styles.resipeName}>{resipe.name}</p>
+
+          <div className={styles.wrapper}>
+            <button className={styles.resipeTag}>{resipe.tag}</button>
+            <div className={styles.btnContainer}>
+              <Link to={`/PagesResipe/${resipe.id}`}>
+                <button className={styles.wiewResipe}>Посмотреть рецепт</button>
+              </Link>
+              <button className={styles.change} onClick={random}>
+                Другой рецепт
+              </button>
+              <button className={styles.close} onClick={() => setActive(false)}>
+                Закрыть
+              </button>
+            </div>
           </div>
         </div>
       </div>
